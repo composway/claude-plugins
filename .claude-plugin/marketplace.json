@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+	"name": "composway",
+	"description": "Composway's official Claude Code plugin — the hosted MCP server plus the skills that drive it.",
+	"owner": {
+		"name": "Composway",
+		"url": "https://composway.ai"
+	},
+	"plugins": [
+		{
+			"name": "composway",
+			"source": "./",
+			"description": "Search-data analytics and content tools for Google Search Console + Bing Webmaster Tools, with skills for triage, diagnosis and the handoff into content work.",
+			"category": "analytics",
+			"homepage": "https://composway.ai/docs/mcp"
+		}
+	]
+}

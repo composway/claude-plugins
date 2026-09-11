@@ -1,0 +1,28 @@
+{
+	"$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+	"name": "composway",
+	"displayName": "Composway",
+	"description": "Composway's search-data analytics and content tools, with skills that turn them into a triage-to-action workflow across Google Search Console and Bing Webmaster Tools.",
+	"version": "0.1.0",
+	"author": {
+		"name": "Composway",
+		"url": "https://composway.ai"
+	},
+	"homepage": "https://composway.ai/docs/mcp",
+	"repository": "https://github.com/voluminoushq/claude-plugins",
+	"license": "MIT",
+	"keywords": [
+		"seo",
+		"aeo",
+		"search-console",
+		"bing-webmaster",
+		"analytics",
+		"content"
+	],
+	"mcpServers": {
+		"composway": {
+			"type": "http",
+			"url": "https://mcp.composway.ai/mcp?utm_source=plugin"
+		}
+	}
+}
