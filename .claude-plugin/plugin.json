@@ -8,7 +8,7 @@
 		"name": "Composway",
 		"url": "https://composway.ai"
 	},
-	"homepage": "https://composway.ai/docs/mcp",
+	"homepage": "https://composway.ai/hub/mcp",
 	"repository": "https://github.com/voluminoushq/claude-plugins",
 	"license": "MIT",
 	"keywords": [

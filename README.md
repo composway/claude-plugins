@@ -24,7 +24,7 @@ little.
 **The MCP server** (`https://mcp.composway.ai/mcp`) — 48 curated tools in four
 groups: diagnostics, workspaces & campaigns, search analytics, and writes. Every
 write asks you to confirm before it runs. Full reference at
-[composway.ai/docs/mcp/tools](https://composway.ai/docs/mcp/tools).
+[composway.ai/hub/mcp/tools](https://composway.ai/hub/mcp/tools).
 
 **Skills** that turn those tools into a workflow:
 
@@ -39,7 +39,7 @@ also invoke it directly as `/composway:search-triage`.
 
 The same server works with Claude desktop, Cursor, Codex, VS Code, Zed and anything
 else that speaks MCP over Streamable HTTP — see
-[composway.ai/docs/mcp/connect](https://composway.ai/docs/mcp/connect). This plugin
+[composway.ai/hub/mcp/connect](https://composway.ai/hub/mcp/connect). This plugin
 is the Claude Code path; it just bundles the connection and the skills into one
 install.
 
