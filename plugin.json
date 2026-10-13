@@ -1,0 +1,46 @@
+{
+	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+	"name": "composway",
+	"version": "0.1.0",
+	"description": "Composway's search-data analytics and content tools, with skills that turn them into a triage-to-action workflow across Google Search Console and Bing Webmaster Tools.",
+	"author": {
+		"name": "Composway",
+		"email": "support@composway.ai",
+		"url": "https://www.composway.ai"
+	},
+	"homepage": "https://www.composway.ai/hub/mcp-docs",
+	"repository": "https://github.com/composway/claude-plugins",
+	"license": "MIT",
+	"keywords": [
+		"seo",
+		"aeo",
+		"search-console",
+		"bing-webmaster",
+		"analytics",
+		"content"
+	],
+	"extensions": {
+		"com.openai": {
+			"interface": {
+				"displayName": "Composway",
+				"shortDescription": "Search analytics for SEO teams",
+				"longDescription": "Composway connects ChatGPT to your Google Search Console and Bing Webmaster Tools data, plus the content work that acts on it.\n\nAsk what to work on and Composway resolves your site, ranks the opportunities, confirms each finding against the data that can settle it, and classifies click losses by cause: ranking drops, page swaps, cannibalization, content decay, or demand shifts. From there it hands off into content work: briefs, outlines and refresh suggestions in your Composway workspace.\n\nYou sign in with your Composway account; there is no API key. The app acts as you, with the same workspaces, permissions and quotas as the web app, and every write asks you to confirm before it runs.\n\nYou need a Composway account with at least one workspace and a connected Search Console or Bing Webmaster Tools property. Sign up at composway.ai.",
+				"developerName": "Composway",
+				"category": "Productivity",
+				"capabilities": ["Read", "Write"],
+				"websiteURL": "https://www.composway.ai/mcp",
+				"supportURL": "https://www.composway.ai/hub/mcp-docs",
+				"privacyPolicyURL": "https://www.composway.ai/legal/privacy-policy",
+				"termsOfServiceURL": "https://www.composway.ai/legal/terms-of-service",
+				"defaultPrompt": [
+					"What should I fix first on my site's search performance?",
+					"Why did my organic clicks drop over the last 28 days?",
+					"Which of my pages are losing traffic to content decay?"
+				],
+				"brandColor": "#0B72EF",
+				"composerIcon": "./assets/icon.png",
+				"logo": "./assets/logo.png"
+			}
+		}
+	}
+}
