@@ -63,6 +63,12 @@ leaves a skill referencing a tool the server no longer exposes. Don't send patch
 here; they'll be overwritten on the next publish. File an issue instead, or write to
 support@composway.ai.
 
+## Privacy
+
+The plugin connects to Composway's remote MCP server at `mcp.composway.ai`. See the
+[Privacy Policy](https://www.composway.ai/legal/privacy-policy) for what passes through
+the connector and how long it is kept.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
