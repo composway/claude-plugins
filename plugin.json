@@ -40,6 +40,60 @@
 				"brandColor": "#0B72EF",
 				"composerIcon": "./assets/icon.png",
 				"logo": "./assets/logo.png"
+			},
+			"review": {
+				"test_cases": {
+					"positive": [
+						{
+							"description": "Rank what to fix first on the account's connected site, priced in clicks.",
+							"prompt": "What should I fix first on my site's search performance?",
+							"tools_triggered": "list_sites, score_seo_opportunities",
+							"expected_behavior": "The assistant finds the connected site with list_sites (asking which one if there are several), then returns a ranked list of opportunities such as low-hanging keywords, low click-through pages, content decay and content gaps. Each comes with its estimated click gain and the pages or queries involved. Nothing is changed and no confirmation is asked."
+						},
+						{
+							"description": "Explain a drop in organic clicks by cause.",
+							"prompt": "Why did my organic clicks drop over the last 28 days?",
+							"tools_triggered": "list_sites, diagnose_traffic_losses",
+							"expected_behavior": "The assistant compares the last 28 days with the 28 days before and lists the pages or queries that lost the most clicks. Each loss is classified as a ranking drop, page swap, click-through drop, visibility loss or demand shift. If clicks did not fall, it says so rather than inventing a cause. Read-only."
+						},
+						{
+							"description": "Find pages whose search traffic is decaying over time.",
+							"prompt": "Which of my pages are losing traffic to content decay?",
+							"tools_triggered": "list_sites, find_content_decay",
+							"expected_behavior": "The assistant returns pages whose clicks have declined steadily across several periods, not just one bad month, with the size of the decline and suggests refreshing them. If no page qualifies it says none was found for the window. Read-only."
+						},
+						{
+							"description": "List the search queries one page appears for.",
+							"prompt": "Which search queries does my homepage show up for on Google and Bing?",
+							"tools_triggered": "list_sites, get_page_queries",
+							"expected_behavior": "The assistant passes the homepage as a full URL and lists the queries the page drew impressions for, with clicks, impressions and average position per engine. It notes that these rows add up to less than the page's totals because anonymized queries are left out. Read-only."
+						},
+						{
+							"description": "Show the search performance trend across both engines.",
+							"prompt": "How has my site's search traffic trended over the last 3 months on Google and Bing?",
+							"tools_triggered": "list_sites, get_performance_trend",
+							"expected_behavior": "The assistant returns clicks, impressions, click-through rate and average position over the last 3 months for Google and Bing separately, and summarises the direction of the trend. An engine with no connected property is reported as not connected rather than as zero. Read-only."
+						}
+					],
+					"negative": [
+						{
+							"description": "Request unrelated to search analytics or content. The plugin should not be called; the assistant answers normally without Composway.",
+							"prompt": "What's the weather in Tokyo tomorrow?"
+						},
+						{
+							"description": "Asks for search data on a site the user does not own. The server returns a not-found error that reveals nothing, and the assistant explains it can only read sites connected to the user's own Composway workspaces.",
+							"prompt": "Show me the Google Search Console data for nytimes.com."
+						},
+						{
+							"description": "Asks to delete a workspace, which the plugin cannot do. No tool is called and nothing is deleted; the assistant says it cannot delete workspaces from ChatGPT.",
+							"prompt": "Delete my Composway workspace and all its data."
+						}
+					]
+				},
+				"commerce": false
+			},
+			"publication": {
+				"release_notes": "First release of Composway for ChatGPT. Connect your Google Search Console and Bing Webmaster Tools data to find what to fix first, see why clicks dropped (ranking, page swaps, cannibalization, content decay or demand), and track how AI answer engines mention your brand. From there, move straight into content work: campaigns, research, and evaluating or improving articles. Sign in with your Composway account, no API key needed. Every change asks for your confirmation before it runs."
 			}
 		}
 	}
